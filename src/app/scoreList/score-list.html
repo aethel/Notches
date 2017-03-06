@@ -1,0 +1,6 @@
+<ul *ngIf="setupObj">
+  <li *ngFor='let points of playersArr; let i = index'>
+    <n-item [points]='points' [index]='i'></n-item>
+  </li>
+</ul>
+<button type="button" (click)='restart()' name="restart">Restart</button>
