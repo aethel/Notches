@@ -18,20 +18,24 @@ export class WelcomeComponent {
     let errorMessage:string;
     switch(true){
       case (isNaN(+this.players) || isNaN(+this.points)):
-      errorMessage = 'The must be numbers';
-      return;
+      errorMessage = 'The values must be numbers';
+			alert(errorMessage);
       break;
       case (this.players == null || this.points == null):
       errorMessage = 'You must specify both values';
+			alert(errorMessage);
       break;
       case (+this.players <= 0 || +this.players > 8):
-      errorMessage = "Can\'t have less than 1 and more than 8 players";
+      errorMessage = "Can\'t have fewer than 1 and more than 8 players";
+			alert(errorMessage);
       break;
       case (+this.points > 999):
       errorMessage = "Max 999 points";
+			alert(errorMessage);
       break;
-      default
-      this.errorMessage = null;
+      default:
+      errorMessage = null;
+			this._router.navigate(['/scoreList', this.players, this.points])
       break
     }
     // if (isNaN(+this.players)
@@ -44,6 +48,6 @@ export class WelcomeComponent {
     //     alert('Missing setup info');
     //   return;
     // }
-    this._router.navigate(['/scoreList', this.players, this.points])
+
   }
 }
