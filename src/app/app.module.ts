@@ -8,6 +8,7 @@ import { WelcomeComponent }  from './welcome/welcome.component';
 import { ScoreListComponent }  from './scoreList/score-list.component';
 import { ScoreListItemComponent }  from './scoreList/score-list-item.component';
 import { InternalDataService }  from './shared/internalDataservice.component';
+import { ScoreListGuard }  from './scoreList/scoreList-guard.service';
 
 @NgModule({
   imports:      [
@@ -15,7 +16,9 @@ import { InternalDataService }  from './shared/internalDataservice.component';
      FormsModule,
      RouterModule.forRoot([
        {path: 'welcome', component: WelcomeComponent},
-       {path: 'scoreList/:players/:points', component: ScoreListComponent},
+       {path: 'scoreList/:players/:points',
+        canActivate: [ScoreListGuard],
+        component: ScoreListComponent},
        {path: '', redirectTo: 'welcome', pathMatch: 'full'}
      ],{useHash:true}) ],
   declarations: [
@@ -24,7 +27,7 @@ import { InternalDataService }  from './shared/internalDataservice.component';
 		ScoreListItemComponent,
 		WelcomeComponent
 	],
-	providers: [InternalDataService],
+	providers: [InternalDataService, ScoreListGuard],
   bootstrap:    [ AppComponent ]
 })
 

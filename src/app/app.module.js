@@ -17,6 +17,7 @@ var welcome_component_1 = require('./welcome/welcome.component');
 var score_list_component_1 = require('./scoreList/score-list.component');
 var score_list_item_component_1 = require('./scoreList/score-list-item.component');
 var internalDataservice_component_1 = require('./shared/internalDataservice.component');
+var scoreList_guard_service_1 = require('./scoreList/scoreList-guard.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,7 +28,9 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 router_1.RouterModule.forRoot([
                     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
-                    { path: 'scoreList/:players/:points', component: score_list_component_1.ScoreListComponent },
+                    { path: 'scoreList/:players/:points',
+                        canActivate: [scoreList_guard_service_1.ScoreListGuard],
+                        component: score_list_component_1.ScoreListComponent },
                     { path: '', redirectTo: 'welcome', pathMatch: 'full' }
                 ], { useHash: true })],
             declarations: [
@@ -36,7 +39,7 @@ var AppModule = (function () {
                 score_list_item_component_1.ScoreListItemComponent,
                 welcome_component_1.WelcomeComponent
             ],
-            providers: [internalDataservice_component_1.InternalDataService],
+            providers: [internalDataservice_component_1.InternalDataService, scoreList_guard_service_1.ScoreListGuard],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
