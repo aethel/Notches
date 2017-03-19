@@ -6,6 +6,8 @@ import {Component, Input} from '@angular/core';
 })
 
 export class ScoreListItemComponent {
+  step:number = 1;
+
   @Input()
   points: number = 0;
 
@@ -13,10 +15,25 @@ export class ScoreListItemComponent {
   playerAlias:number = 0;
 
   add():void {
-    this.points += 1;
+    this.points += this.step;
   }
 
   subtract():void {
-    this.points -= 1;
+    this.points -= this.step;
+  }
+
+  press(event:any) {
+    console.log('longpressParent', event);
+  }
+
+
+  longPressingAdd(event:any) {
+    this.points += this.step*10;
+
+  }
+
+  longPressingSubtract(event:any) {
+    this.points -= this.step*10;
+
   }
 }

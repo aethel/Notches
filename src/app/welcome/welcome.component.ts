@@ -37,17 +37,7 @@ export class WelcomeComponent {
       errorMessage = null;
 			this._router.navigate(['/scoreList', this.players, this.points])
       break
-    }
-    // if (isNaN(+this.players)
-    //   || this.players == null
-    //   || +this.players <= 0
-    //   || +this.players > 8
-    //   || isNaN(+this.points)
-    //   || +this.points > 999
-    //   || this.points == null) {
-    //     alert('Missing setup info');
-    //   return;
-    // }
+    }    
 
   }
 }
