@@ -9,6 +9,7 @@ import { ScoreListComponent }  from './scoreList/score-list.component';
 import { ScoreListItemComponent }  from './scoreList/score-list-item.component';
 import { InternalDataService }  from './shared/internalDataservice.component';
 import { ScoreListGuard }  from './scoreList/scoreList-guard.service';
+import { LongPress }  from './scoreList/longtap.directive';
 
 @NgModule({
   imports:      [
@@ -25,7 +26,8 @@ import { ScoreListGuard }  from './scoreList/scoreList-guard.service';
 		AppComponent,
 		ScoreListComponent,
 		ScoreListItemComponent,
-		WelcomeComponent
+		WelcomeComponent,
+		LongPress
 	],
 	providers: [InternalDataService, ScoreListGuard],
   bootstrap:    [ AppComponent ]
