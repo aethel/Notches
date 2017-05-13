@@ -1,5 +1,5 @@
-<button long-press type="button"   (onLongPressing)='longPressingAdd($event)' (click)='add()' name="add">+</button>
-<span><input type="text" name="player" [(ngModel)]='playerAlias'></span>
+<button long-press type="button" class="score-list__button score-list__button--plus"  (onLongPressing)='longPressingAdd($event)' (click)='add()' name="add">+</button>
+  <input class="score-list__input"  type="text" name="player" [(ngModel)]='playerAlias'>
 
-<input type="number" name="" [(ngModel)]='points'>
-<button long-press type="button"  (onLongPressing)='longPressingSubtract($event)' (click)='subtract()' name="subtract">-</button>
+<input class="score-list__input" type="number" name="" [(ngModel)]='points'>
+<button long-press type="button" class="score-list__button score-list__button--minus"  (onLongPressing)='longPressingSubtract($event)' (click)='subtract()' name="subtract">-</button>

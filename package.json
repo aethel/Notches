@@ -19,7 +19,7 @@
     "pretest:once": "npm run build",
     "test:once": "karma start karma.conf.js --single-run",
     "lint": "tslint ./src/**/*.ts -t verbose",
-		"build-css": "node-sass  --include-path scss src/app/styles/main.scss  src/styles.css",
+		"build-css": "node-sass  --include-path scss src/app/main.scss  src/styles.css",
 		"watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "keywords": [],

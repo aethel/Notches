@@ -1,5 +1,5 @@
-<ul *ngIf="setupObj">
-  <li *ngFor='let points of playersArr; let i = index'>
+<ul class="score-list" *ngIf="setupObj">
+  <li class="score-list__item" *ngFor='let points of playersArr; let i = index'>
     <n-item [points]='points' [index]='i'></n-item>
   </li>
 </ul>

@@ -1,0 +1,13 @@
+@import 'styles/global/reset';
+
+@import 'styles/atoms/input';
+
+@import 'styles/molecules/hex';
+@import 'styles/molecules/start-form';
+
+// @import 'sass/partial';
+$ares: pink;
+
+body {
+	background: $ares;
+}

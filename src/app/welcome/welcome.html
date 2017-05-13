@@ -1,5 +1,15 @@
-<label for="players">Starting Players</label>
-<input type="number" id="players" [(ngModel)]='players' name="players" value=""/>
-<label for="players">Starting Points</label>
-<input type="number" id="points" [(ngModel)]='points' name="points" value=""/>
+<ol class="start-form">
+  <li class="start-form__item">
+    <label for="players">Starting Players</label>
+    <div class="hex-bg">
+      <input type="number" class="start-form__input" id="players" [(ngModel)]='players' name="players" value="" />
+    </div>
+  </li>
+  <li class="start-form__item">
+    <label for="players">Starting Points</label>
+    <div class="hex-bg">
+      <input type="number" class="start-form__input" id="points" [(ngModel)]='points' name="points" value="" />
+    </div>
+  </li>
+</ol>
 <button type="button" (click)="sendSetupObj()" name="button">Start</button>
