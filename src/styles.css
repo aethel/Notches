@@ -115,8 +115,7 @@ n-item {
   grid-area: score; }
 
 n-welcome {
+  background-image: linear-gradient(-38deg, #9b3cb7, #ff396f);
   display: block;
-  text-align: center; }
-
-body {
-  background: pink; }
+  text-align: center;
+  color: #fff; }
