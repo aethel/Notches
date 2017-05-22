@@ -75,22 +75,48 @@ input {
     outline: none; }
 
 .hex-bg {
-  position: relative;
-  height: 100%; }
+  height: calc(100% - 1.7rem); }
   .hex-bg:after {
     content: '';
+    height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
     z-index: -1;
-    background: url("./app/images/hex.svg") no-repeat center center; }
+    background: url("./app/images/hex.svg") no-repeat center center/cover; }
 
 .start-form__item {
   width: 80vw;
   height: 33vh;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 .start-form__input {
   text-align: center; }
+
+n-item {
+  display: inline-grid;
+  grid-gap: 1rem;
+  grid-auto-flow: row;
+  grid-template-columns: [plus-btn] auto [player] 1fr [score] 2fr [minus-btn] auto; }
+
+.score-list__plus {
+  grid-area: plus-btn; }
+
+.score-list__minus {
+  grid-area: minus-btn; }
+
+.score-list__player {
+  grid-area: player; }
+
+.score-list__score {
+  grid-area: score; }
+
+n-welcome {
+  display: block;
+  text-align: center; }
+
+body {
+  background: pink; }

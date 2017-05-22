@@ -1,0 +1,24 @@
+n-item {
+	display: inline-grid;
+	grid-gap: 1rem;
+	grid-auto-flow: row;
+	grid-template-columns: [plus-btn] auto [player] 1fr [score] 2fr [minus-btn] auto;
+	// grid-template-areas:
+	// 	'plus-btn''player''score''minus-btn'
+}
+
+.score-list__plus {
+	grid-area: plus-btn;
+}
+
+.score-list__minus {
+	grid-area: minus-btn;
+}
+
+.score-list__player {
+	grid-area: player;
+}
+
+.score-list__score {
+	grid-area: score;
+}
