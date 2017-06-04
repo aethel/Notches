@@ -4,9 +4,13 @@
 @import 'styles/global/typography';
 
 @import 'styles/atoms/input';
+@import 'styles/atoms/headings';
+@import 'styles/atoms/label';
 
 @import 'styles/molecules/hex';
 @import 'styles/molecules/start-form';
 @import 'styles/molecules/score-list';
+@import 'styles/molecules/main-header';
+@import 'styles/molecules/input-circle';
 
 @import 'styles/organisms/n-welcome';
