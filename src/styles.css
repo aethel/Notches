@@ -87,6 +87,10 @@ label {
   color: #fff;
   line-height: 1.4; }
 
+img {
+  max-width: 100%;
+  width: 100%; }
+
 .hex-bg {
   height: calc(100% - 1.7rem); }
   .hex-bg:after {
@@ -151,6 +155,10 @@ n-item {
   text-transform: uppercase;
   color: #fff;
   background-color: transparent; }
+
+.jewel {
+  max-width: 9rem;
+  margin: auto; }
 
 n-welcome {
   background-image: linear-gradient(-38deg, #9b3cb7, #ff396f);
