@@ -5,4 +5,10 @@ n-welcome {
 	color: $light;
 	display: block;
 	height: 100vh;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
+.input-circle {
+	margin: 1.25rem auto 0;
 }

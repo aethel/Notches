@@ -1,8 +1,12 @@
 .start-form__item {
   width: 80vw;
-  height: 33vh;
-  margin: 0 auto;
+  height: auto;
+  margin: 0 auto 3.5rem;
 	position: relative;
+
+	&:last-child {
+	margin: 0 auto 5rem;
+	}
 }
 
 .start-form__input {
