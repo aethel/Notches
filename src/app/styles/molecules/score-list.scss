@@ -2,9 +2,10 @@ n-item {
 	display: inline-grid;
 	grid-gap: 1rem;
 	grid-auto-flow: row;
-	grid-template-columns: [plus-btn] auto [player] 1fr [score] 2fr [minus-btn] auto;
+	grid-template-columns: [plus-btn] auto [info] 3fr [minus-btn] auto;
 	// grid-template-areas:
 	// 	'plus-btn''player''score''minus-btn'
+	color: $light;
 }
 
 .score-list__plus {
@@ -15,10 +16,38 @@ n-item {
 	grid-area: minus-btn;
 }
 
+.score-list__info {
+	grid-area: info;
+}
+
+.score-list__input {
+	color: $light;
+	text-align: center;
+}
+
 .score-list__player {
 	grid-area: player;
+	& .score-list__input {
+		font-size: 1.8rem;
+	}
 }
 
 .score-list__score {
 	grid-area: score;
+	& .score-list__input {
+		font-size: 3.6rem;
+	}
+}
+
+.score-list__info {
+	display: inline-grid;
+	grid-auto-flow: column;
+	grid-template-rows: [player] auto [score] auto;
+}
+
+.score-list__button {
+	background-color: transparent;
+	border: none;
+	height: 100%;
+	font-size: 3.6rem;
 }
