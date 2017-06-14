@@ -10,3 +10,32 @@ $headerStep2: #43e7c1;
 $light: #fff;
 $dark: #000;
 $graphite: #263238;
+http://krasimirtsonev.com/blog/article/SASS-interpolation-in-a-name-of-variable-nest-variables-within-variables
+%player1stop1: #fec180;
+$player1stop2: #ff8993;
+$player2stop1: #ffa7e7;
+$player2stop2: #ea6362;
+$player3stop1: #e01e2d;
+$player3stop2: #c53364;
+$player4stop1: #6078ea;
+$player4stop2: #17ead9;
+$player5stop1: #45e0a7;
+$player5stop2: #b8d534;
+$player6stop1: #004b91;
+$player6stop2: #60bb46;
+$player7stop1: #efbfd5;
+$player7stop2: #9d61fd;
+$player8stop1: #e35c67;
+$player8stop2: #381ce2;
+
+$players: 8;
+
+@mixin playerColours {
+  @for $i from 1 through $players {
+    .player-#{i} {
+      &:after {
+        background: linear-gradient(to right, $player#{i}stop1, $player#{i}stop2);
+      }
+    }
+  }
+}
