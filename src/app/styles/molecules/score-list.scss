@@ -2,7 +2,7 @@ n-item {
 	display: inline-grid;
 	grid-gap: 1rem;
 	grid-auto-flow: row;
-	grid-template-columns: [plus-btn] auto [info] 3fr [minus-btn] auto;
+	grid-template-columns: [plus-btn] 10vw [info] 3fr [minus-btn] 10vw;
 	// grid-template-areas:
 	// 	'plus-btn''player''score''minus-btn'
 	color: $light;
@@ -46,8 +46,18 @@ n-item {
 }
 
 .score-list__button {
-	background-color: transparent;
 	border: none;
 	height: 100%;
 	font-size: 3.6rem;
+	color: $light;
+	width: 100%;
+	background-size: 2.25rem;
+}
+
+.score-list__button--plus {
+	background: url("./app/images/plus.svg") no-repeat center center / 2.25rem transparent;
+}
+
+.score-list__button--minus {
+	background: url("./app/images/minus.svg") no-repeat center center / 2.25rem transparent;
 }
