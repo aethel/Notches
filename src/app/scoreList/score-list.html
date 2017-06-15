@@ -1,7 +1,8 @@
 <div class="n-list">
 	<h1 class="main-header">Notches</h1>
 	<ul class="score-list" *ngIf="setupObj">
-		<li class="score-list__item" *ngFor='let points of playersArr; let i = index'>
+		<li class="score-list__item player{{i+1}}" *ngFor='let points of playersArr; let i = index'>
+			player-{{i}}
 			<n-item [points]='points' [index]='i'></n-item>
 		</li>
 	</ul>

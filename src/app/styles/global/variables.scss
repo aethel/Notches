@@ -10,32 +10,67 @@ $headerStep2: #43e7c1;
 $light: #fff;
 $dark: #000;
 $graphite: #263238;
-http://krasimirtsonev.com/blog/article/SASS-interpolation-in-a-name-of-variable-nest-variables-within-variables
-%player1stop1: #fec180;
-$player1stop2: #ff8993;
-$player2stop1: #ffa7e7;
-$player2stop2: #ea6362;
-$player3stop1: #e01e2d;
-$player3stop2: #c53364;
-$player4stop1: #6078ea;
-$player4stop2: #17ead9;
-$player5stop1: #45e0a7;
-$player5stop2: #b8d534;
-$player6stop1: #004b91;
-$player6stop2: #60bb46;
-$player7stop1: #efbfd5;
-$player7stop2: #9d61fd;
-$player8stop1: #e35c67;
-$player8stop2: #381ce2;
+
+$playerStop1-1: #fec180;
+$playerStop2-1: #ff8993;
+$playerStop1-2: #ffa7e7;
+$playerStop2-2: #ea6362;
+$playerStop1-3: #e01e2d;
+$playerStop2-3: #c53364;
+$playerStop1-4: #6078ea;
+$playerStop2-4: #17ead9;
+$playerStop1-5: #45e0a7;
+$playerStop2-5: #b8d534;
+$playerStop1-6: #004b91;
+$playerStop2-6: #60bb46;
+$playerStop1-7: #efbfd5;
+$playerStop2-7: #9d61fd;
+$playerStop1-8: #e35c67;
+$playerStop2-8: #381ce2;
+
+%player1 {
+  background: linear-gradient(to right, $playerStop1-1, $playerStop2-1);
+}
+
+%player2 {
+  background: linear-gradient(to right, $playerStop1-2, $playerStop2-2);
+}
+
+%player3 {
+  background: linear-gradient(to right, $playerStop1-3, $playerStop2-3);
+}
+
+%player4 {
+  background: linear-gradient(to right, $playerStop1-4, $playerStop2-4);
+}
+
+%player5 {
+  background: linear-gradient(to right, $playerStop1-5, $playerStop2-5);
+}
+
+%player6 {
+  background: linear-gradient(to right, $playerStop1-6, $playerStop2-6);
+}
+
+%player7 {
+  background: linear-gradient(to right, $playerStop1-7, $playerStop2-7);
+}
+
+%player8 {
+  background: linear-gradient(to right, $playerStop1-8, $playerStop2-8);
+}
+
 
 $players: 8;
 
 @mixin playerColours {
   @for $i from 1 through $players {
-    .player-#{i} {
+    .player#{$i} {
       &:after {
-        background: linear-gradient(to right, $player#{i}stop1, $player#{i}stop2);
+        @extend %player#{$i};
       }
     }
   }
 }
+
+@include playerColours;
