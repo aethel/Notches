@@ -169,8 +169,6 @@ n-item {
 
 .score-list__score {
   grid-area: score; }
-  .score-list__score .score-list__input {
-    font-size: 3.6rem; }
 
 .score-list__info {
   display: inline-grid;
@@ -235,10 +233,66 @@ n-item {
   .score-list__item:before {
     background: #263238;
     z-index: -1;
-    top: 0.2rem;
-    left: 0.2rem;
-    bottom: 0.2rem;
-    right: 0.2rem; }
+    top: 0.3rem;
+    left: 0.3rem;
+    bottom: 0.3rem;
+    right: 0.3rem; }
+
+.score-list__item:first-child:nth-last-child(1),
+.score-list__item:first-child:nth-last-child(1) ~ .score-list__item {
+  height: calc(78vh / 1); }
+  .score-list__item:first-child:nth-last-child(1) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(1) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(3vh + 7vh); }
+
+.score-list__item:first-child:nth-last-child(2),
+.score-list__item:first-child:nth-last-child(2) ~ .score-list__item {
+  height: calc(78vh / 2); }
+  .score-list__item:first-child:nth-last-child(2) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(2) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(3vh + 6vh); }
+
+.score-list__item:first-child:nth-last-child(3),
+.score-list__item:first-child:nth-last-child(3) ~ .score-list__item {
+  height: calc(78vh / 3); }
+  .score-list__item:first-child:nth-last-child(3) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(3) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(3vh + 5vh); }
+
+.score-list__item:first-child:nth-last-child(4),
+.score-list__item:first-child:nth-last-child(4) ~ .score-list__item {
+  height: calc(78vh / 4); }
+  .score-list__item:first-child:nth-last-child(4) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(4) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(3vh + 4vh); }
+
+.score-list__item:first-child:nth-last-child(5),
+.score-list__item:first-child:nth-last-child(5) ~ .score-list__item {
+  height: calc(78vh / 5); }
+  .score-list__item:first-child:nth-last-child(5) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(5) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(3vh + 3vh); }
+
+.score-list__item:first-child:nth-last-child(6),
+.score-list__item:first-child:nth-last-child(6) ~ .score-list__item {
+  height: calc(78vh / 6); }
+  .score-list__item:first-child:nth-last-child(6) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(6) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(3vh + 2vh); }
+
+.score-list__item:first-child:nth-last-child(7),
+.score-list__item:first-child:nth-last-child(7) ~ .score-list__item {
+  height: calc(78vh / 7); }
+  .score-list__item:first-child:nth-last-child(7) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(7) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(3vh + 1vh); }
+
+.score-list__item:first-child:nth-last-child(8),
+.score-list__item:first-child:nth-last-child(8) ~ .score-list__item {
+  height: calc(78vh / 8); }
+  .score-list__item:first-child:nth-last-child(8) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(8) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(3vh + 0vh); }
 
 n-welcome {
   background-image: linear-gradient(-38deg, #9b3cb7, #ff396f);
@@ -246,7 +300,7 @@ n-welcome {
   text-align: center;
   color: #fff;
   display: block;
-  height: 100vh;
+  min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box; }
 

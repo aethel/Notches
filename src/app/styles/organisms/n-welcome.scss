@@ -4,7 +4,7 @@ n-welcome {
 	text-align: center;
 	color: $light;
 	display: block;
-	height: 100vh;
+	min-height: 100vh;
 	padding: 2rem;
 	box-sizing: border-box;
 }

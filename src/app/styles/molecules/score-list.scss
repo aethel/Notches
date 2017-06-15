@@ -34,10 +34,11 @@ n-item {
 
 .score-list__score {
 	grid-area: score;
-	& .score-list__input {
-		font-size: 3.6rem;
-	}
+	// & .score-list__input {
+	// 	font-size: 3.6rem;
+	// }
 }
+
 
 .score-list__info {
 	display: inline-grid;
