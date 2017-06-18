@@ -2,6 +2,7 @@
 	border-radius: 50vh;
 	position: relative;
 	z-index: 2;
+	margin: 0 0 1vh 0;
 
 	&:after,
 	&:before {
@@ -43,10 +44,11 @@ $factor: 1.5;
   .score-list__item:first-child:nth-last-child(#{$i}),
   .score-list__item:first-child:nth-last-child(#{$i}) ~ .score-list__item  {
     // height: calc((#{$defaultHeight} - 1.5rem) / #{$i});
-    height: calc((#{$listHeight} - #{$listContainerPadding}) / #{$i});
+    height: calc(((#{$listHeight} - #{$listContainerPadding}) / #{$i}) - 1vh);
+		max-height: 11.5rem;
 		.score-list__score .score-list__input {
 			// font-size: calc(#{$defaultFont} / #{$i/1.5}vh);
-			// font-size: calc(3vh + #{$players - $i}vh);
+			font-size: calc(4vh + #{$players - $i}vh);
 		}
 	}
 }

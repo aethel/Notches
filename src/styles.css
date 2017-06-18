@@ -221,7 +221,8 @@ n-item {
 .score-list__item {
   border-radius: 50vh;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  margin: 0 0 1vh 0; }
   .score-list__item:after, .score-list__item:before {
     content: '';
     display: inline-block;
@@ -243,35 +244,67 @@ n-item {
 
 .score-list__item:first-child:nth-last-child(1),
 .score-list__item:first-child:nth-last-child(1) ~ .score-list__item {
-  height: calc((85vh - 4rem) / 1); }
+  height: calc(((85vh - 4rem) / 1) - 1vh);
+  max-height: 11.5rem; }
+  .score-list__item:first-child:nth-last-child(1) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(1) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(4vh + 7vh); }
 
 .score-list__item:first-child:nth-last-child(2),
 .score-list__item:first-child:nth-last-child(2) ~ .score-list__item {
-  height: calc((85vh - 4rem) / 2); }
+  height: calc(((85vh - 4rem) / 2) - 1vh);
+  max-height: 11.5rem; }
+  .score-list__item:first-child:nth-last-child(2) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(2) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(4vh + 6vh); }
 
 .score-list__item:first-child:nth-last-child(3),
 .score-list__item:first-child:nth-last-child(3) ~ .score-list__item {
-  height: calc((85vh - 4rem) / 3); }
+  height: calc(((85vh - 4rem) / 3) - 1vh);
+  max-height: 11.5rem; }
+  .score-list__item:first-child:nth-last-child(3) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(3) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(4vh + 5vh); }
 
 .score-list__item:first-child:nth-last-child(4),
 .score-list__item:first-child:nth-last-child(4) ~ .score-list__item {
-  height: calc((85vh - 4rem) / 4); }
+  height: calc(((85vh - 4rem) / 4) - 1vh);
+  max-height: 11.5rem; }
+  .score-list__item:first-child:nth-last-child(4) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(4) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(4vh + 4vh); }
 
 .score-list__item:first-child:nth-last-child(5),
 .score-list__item:first-child:nth-last-child(5) ~ .score-list__item {
-  height: calc((85vh - 4rem) / 5); }
+  height: calc(((85vh - 4rem) / 5) - 1vh);
+  max-height: 11.5rem; }
+  .score-list__item:first-child:nth-last-child(5) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(5) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(4vh + 3vh); }
 
 .score-list__item:first-child:nth-last-child(6),
 .score-list__item:first-child:nth-last-child(6) ~ .score-list__item {
-  height: calc((85vh - 4rem) / 6); }
+  height: calc(((85vh - 4rem) / 6) - 1vh);
+  max-height: 11.5rem; }
+  .score-list__item:first-child:nth-last-child(6) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(6) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(4vh + 2vh); }
 
 .score-list__item:first-child:nth-last-child(7),
 .score-list__item:first-child:nth-last-child(7) ~ .score-list__item {
-  height: calc((85vh - 4rem) / 7); }
+  height: calc(((85vh - 4rem) / 7) - 1vh);
+  max-height: 11.5rem; }
+  .score-list__item:first-child:nth-last-child(7) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(7) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(4vh + 1vh); }
 
 .score-list__item:first-child:nth-last-child(8),
 .score-list__item:first-child:nth-last-child(8) ~ .score-list__item {
-  height: calc((85vh - 4rem) / 8); }
+  height: calc(((85vh - 4rem) / 8) - 1vh);
+  max-height: 11.5rem; }
+  .score-list__item:first-child:nth-last-child(8) .score-list__score .score-list__input,
+  .score-list__item:first-child:nth-last-child(8) ~ .score-list__item .score-list__score .score-list__input {
+    font-size: calc(4vh + 0vh); }
 
 n-welcome {
   background-image: linear-gradient(-38deg, #9b3cb7, #ff396f);
