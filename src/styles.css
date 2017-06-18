@@ -222,7 +222,9 @@ n-item {
   border-radius: 50vh;
   position: relative;
   z-index: 2;
-  margin: 0 0 1vh 0; }
+  margin: 0 0 1vh 0;
+  display: flex;
+  align-items: center; }
   .score-list__item:after, .score-list__item:before {
     content: '';
     display: inline-block;
