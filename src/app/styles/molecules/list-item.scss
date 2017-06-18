@@ -27,19 +27,26 @@
 		bottom: 0.3rem;
 		right: 0.3rem;
 	}
+
+	// &:not(:last-child){
+	// 	margin: 0 0 1.5rem;
+	// }
 }
 
-$defaultHeight: 78vh;
+$defaultHeight: 75vh;
+$listHeight: 85vh;
+$listContainerPadding: 4rem;
 $defaultFont: 9vh;
 $factor: 1.5;
 
 @for $i from 1 through $players {
   .score-list__item:first-child:nth-last-child(#{$i}),
   .score-list__item:first-child:nth-last-child(#{$i}) ~ .score-list__item  {
-    height: calc(#{$defaultHeight} / #{$i});
+    // height: calc((#{$defaultHeight} - 1.5rem) / #{$i});
+    height: calc((#{$listHeight} - #{$listContainerPadding}) / #{$i});
 		.score-list__score .score-list__input {
 			// font-size: calc(#{$defaultFont} / #{$i/1.5}vh);
-			font-size: calc(3vh + #{$players - $i}vh);
+			// font-size: calc(3vh + #{$players - $i}vh);
 		}
 	}
 }
