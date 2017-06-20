@@ -1,7 +1,7 @@
 n-item {
 	display: inline-grid;
 	grid-auto-flow: row;
-	grid-template-columns: [plus-btn] 10vw [info] 3fr [minus-btn] 10vw;
+	grid-template-columns: [plus-btn] 20vw [info] 3fr [minus-btn] 20vw;
 	// grid-template-areas:
 	// 	'plus-btn''player''score''minus-btn'
 	color: $light;

@@ -24,15 +24,15 @@
 	&:before {
 		background: $graphite;
 		z-index: -1;
-		top: 0.3rem;
-		left: 0.3rem;
-		bottom: 0.3rem;
-		right: 0.3rem;
+		top: 0.2rem;
+		left: 0.2rem;
+		bottom: 0.2rem;
+		right: 0.2rem;
 	}
 
-	// &:not(:last-child){
-	// 	margin: 0 0 1.5rem;
-	// }
+	&:last-child{
+		margin: 0 !important;
+	}
 }
 
 $defaultHeight: 75vh;
@@ -45,25 +45,13 @@ $factor: 1.5;
   .score-list__item:first-child:nth-last-child(#{$i}),
   .score-list__item:first-child:nth-last-child(#{$i}) ~ .score-list__item  {
     // height: calc((#{$defaultHeight} - 1.5rem) / #{$i});
-    height: calc(((#{$listHeight} - #{$listContainerPadding}) / #{$i}) - 1vh);
+    height: calc(((#{$listHeight} - #{$listContainerPadding}) / #{$i}) - (#{$players}vh - #{$i}vh));
 		max-height: 11.5rem;
+		min-height: 4.5rem;
+		margin-bottom:calc((#{$players}vh - #{$i}vh));
 		.score-list__score .score-list__input {
 			// font-size: calc(#{$defaultFont} / #{$i/1.5}vh);
 			font-size: calc(4vh + #{$players - $i}vh);
 		}
 	}
 }
-
-//
-// .score-list__score {
-// 	grid-area: score;
-// 	// & .score-list__input {
-// 	// 	font-size: 3.6rem;
-// 	// }
-//
-// 	$defaultFont: 9vh;
-// 	@for $i from 1 through $players {
-// 		.score-list__input:first-child:nth-last-child(#{$i}) .score-list__score .score-list__input,
-// 		.score-list__input:first-child:nth-last-child(#{$i}) ~ .score-list__score .score-list__input  {
-// 			font-size: calc(#{$defaultFont} - #{$i}vh) }
-// 		}
