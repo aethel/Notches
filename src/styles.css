@@ -326,6 +326,18 @@ n-item {
   .score-list__item:first-child:nth-last-child(8) ~ .score-list__item .score-list__score .score-list__input {
     font-size: calc(4vh + 0vh); }
 
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background: #323b44; }
+
+.icon-item__figure {
+  width: calc(2rem + 4vh); }
+
 n-welcome {
   background-image: linear-gradient(-38deg, #9b3cb7, #ff396f);
   display: block;

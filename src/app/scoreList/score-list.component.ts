@@ -11,7 +11,7 @@ export class ScoreListComponent implements OnInit {
 	private setupObj:Object;
 	private playersArr:any[];
   private orientation:any;
-
+  private popover:boolean = false;
 
 	constructor(private _route: ActivatedRoute, private _router: Router) {
   }
