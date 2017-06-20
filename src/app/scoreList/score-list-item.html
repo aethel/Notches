@@ -3,10 +3,10 @@
 </div>
 <div class="score-list__info">
   <div class="score-list__player">
-    <input class="score-list__input" type="text" name="player" [(ngModel)]='playerAlias'>
+    <input class="score-list__input" type="text" name="player" [(ngModel)]="'Player ' + playerAlias" />
   </div>
   <div class="score-list__score">
-    <input class="score-list__input" type="number" name="" [(ngModel)]='points'>
+    <input class="score-list__input" type="number" name="" [(ngModel)]='points'/>
   </div>
 </div>
 <div class="score-list__minus">
