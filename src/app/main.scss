@@ -9,6 +9,7 @@
 @import 'styles/atoms/headings';
 @import 'styles/atoms/label';
 @import 'styles/atoms/img';
+@import 'styles/atoms/button';
 
 @import 'styles/molecules/hex';
 @import 'styles/molecules/start-form';
@@ -20,7 +21,8 @@
 @import 'styles/molecules/list-item';
 @import 'styles/molecules/restart-btn';
 @import 'styles/molecules/popover';
-@import 'styles/molecules/list-icon-item.scss';
+@import 'styles/molecules/list-icon-item';
+@import 'styles/molecules/close-btn';
 
 @import 'styles/organisms/n-welcome';
 @import 'styles/organisms/n-list';

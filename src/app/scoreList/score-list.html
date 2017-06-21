@@ -9,8 +9,8 @@
 		</li>
 	</ul>
 	<div class="popover" *ngIf=popover>
-		<header>
-			<button type="button" (click)='popover = !popover' name="popover">close</button>
+		<header class="popover__header">
+			<button type="button" (click)='popover = !popover' class="button--close" name="popover"></button>
 			<h2>Instructions</h2>
 		</header>
 		<ul>
@@ -20,19 +20,19 @@
 				</figure>
 				<p class="icon-item__text">Tap on player's label to enter a name</p>
 			</li>
-			<li>
+			<li class="icon-item">
 				<figure class="icon-item__figure">
 					<img src="./app/images/tap.svg" alt="hand outline with extended finger"/>
 				</figure>
 				<p class="icon-item__text">Tap plus or minus to add or subtract points</p>
 			</li>
-			<li>
+			<li class="icon-item">
 				<figure class="icon-item__figure">
 					<img src="./app/images/longtap.svg" alt="hand outline with extended finger and circle around it">
 				</figure>
 				<p class="icon-item__text">Long tap plus or minus to add or subtract 10 points</p>
 			</li>
-			<li>
+			<li class="icon-item">
 				<figure class="icon-item__figure">
 					<img src="./app/images/tap.svg" alt="hand outline with extended finger">
 				</figure>
@@ -42,6 +42,5 @@
 				<button type="button" (click)='restart()' name="restart">Restart</button>
 			</li>
 		</ul>
-		popover
 	</div>
 </div>

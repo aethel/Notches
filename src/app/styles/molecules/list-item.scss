@@ -44,13 +44,11 @@ $factor: 1.5;
 @for $i from 1 through $players {
   .score-list__item:first-child:nth-last-child(#{$i}),
   .score-list__item:first-child:nth-last-child(#{$i}) ~ .score-list__item  {
-    // height: calc((#{$defaultHeight} - 1.5rem) / #{$i});
     height: calc(((#{$listHeight} - #{$listContainerPadding}) / #{$i}) - (#{$players}vh - #{$i}vh));
 		max-height: 11.5rem;
 		min-height: 4.5rem;
 		margin-bottom:calc((#{$players}vh - #{$i}vh));
 		.score-list__score .score-list__input {
-			// font-size: calc(#{$defaultFont} / #{$i/1.5}vh);
 			font-size: calc(4vh + #{$players - $i}vh);
 		}
 	}
