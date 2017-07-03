@@ -24,12 +24,8 @@ export class ScoreListComponent implements OnInit {
   }
 
   restart():void {
-    this._router.navigate(['/welcome']);
+    if(window.confirm('Really reset?')){
+      this._router.navigate(['/welcome']);
+    }
   }
-
-  // orientationChange():void{
-  //   window.addEventListener('orientationchange', function(){
-  //     console.log(window.screen.orientation.type);
-  //   }, false);
-  // }
 }

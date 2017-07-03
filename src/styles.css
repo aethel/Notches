@@ -376,6 +376,16 @@ n-item {
   height: calc(2rem + 1vh);
   background: url("/app/images/cross.svg") no-repeat center center/contain transparent; }
 
+.button--menu {
+  width: calc(2rem + 1vh);
+  height: calc(2rem + 1vh);
+  background: url("/app/images/menu.svg") no-repeat center center/contain transparent; }
+
+.button--restart {
+  width: calc(2rem + 1vh);
+  height: calc(2rem + 1vh);
+  background: url("/app/images/restart.svg") no-repeat center center/contain transparent; }
+
 n-welcome {
   background-image: linear-gradient(-38deg, #9b3cb7, #ff396f);
   display: block;
@@ -396,3 +406,19 @@ n-welcome {
   min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box; }
+  .n-list header {
+    display: flex;
+    justify-content: center;
+    align-items: baseline; }
+  .n-list .button--menu {
+    margin-top: 1rem;
+    position: absolute;
+    left: 8rem; }
+  .n-list .button--close,
+  .n-list .button--restart {
+    margin-top: 1rem;
+    position: absolute; }
+  .n-list .button--close {
+    left: 8rem; }
+  .n-list .button--restart {
+    right: 8rem; }

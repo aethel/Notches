@@ -1,7 +1,8 @@
 <div class="n-list">
-	<header>
-		<button type="button" (click)='popover = !popover' name="popover">Menu</button>
+	<header class="header">
+		<button type="button" class="button--menu" (click)='popover = !popover' name="popover"></button>
 		<h1 class="main-header">Notches</h1>
+		<button type="button" class="button--restart" (click)='restart()' name="restart"></button>
 	</header>
 	<ul class="score-list" *ngIf="setupObj">
 		<li class="score-list__item player{{i+1}}" *ngFor='let points of playersArr; let i = index'>
@@ -37,9 +38,6 @@
 					<img src="./app/images/tap.svg" alt="hand outline with extended finger">
 				</figure>
 				<p class="icon-item__text">Tap the score to type in the number of points</p>
-			</li>
-			<li>
-				<button type="button" (click)='restart()' name="restart">Restart</button>
 			</li>
 		</ul>
 	</div>
