@@ -6,25 +6,22 @@ import {Router, ActivatedRoute} from '@angular/router';
   // selector: 'n-list',
   templateUrl: 'app/scoreList/score-list.html'
 })
-
 export class ScoreListComponent implements OnInit {
-	private setupObj:Object;
-	private playersArr:any[];
-  private orientation:any;
-  private popover:boolean = false;
+  private setupObj: Object;
+  private playersArr: any[];
+  private popover: boolean = false;
 
-	constructor(private _route: ActivatedRoute, private _router: Router) {
+  constructor(private _route: ActivatedRoute, private _router: Router) {}
+
+  ngOnInit(): void {
+    this.setupObj = this._route.snapshot.params;
+    this.playersArr = Array(+this.setupObj['players']).fill(
+      +this.setupObj['points']
+    );
   }
 
-	ngOnInit():void {
-		this.setupObj = this._route.snapshot.params;
-		this.playersArr = Array(+this.setupObj['players']).fill(+this.setupObj['points']);
-		console.log(typeof(this.setupObj['players']),this.playersArr);
-    // this.orientationChange();
-  }
-
-  restart():void {
-    if(window.confirm('Really reset?')){
+  restart(): void {
+    if (window.confirm('Really reset?')) {
       this._router.navigate(['/welcome']);
     }
   }

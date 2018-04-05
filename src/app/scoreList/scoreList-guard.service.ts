@@ -6,9 +6,7 @@ import {ActivatedRouteSnapshot, CanActivate, Router} from '@angular/router';
 export class ScoreListGuard implements CanActivate {
   constructor(private _router: Router) {}
   canActivate(route: ActivatedRouteSnapshot):boolean {
-    console.log(route);
     let {players, points} = route.params;
-    console.log(players, points);
     if(isNaN(+players)
         || players == null
         || +players <= 0
