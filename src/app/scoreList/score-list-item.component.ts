@@ -1,35 +1,45 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'n-item',
-  templateUrl: 'app/scoreList/score-list-item.html'
+  templateUrl: './score-list-item.html'
 })
-export class ScoreListItemComponent {
-  step: number = 1;
+export class ScoreListItemComponent implements OnInit {
+  step = 1;
   public playerName: string;
+  private longTap = false;
 
-  @Input() points: number = 0;
-
-  @Input('index') playerAlias: number = 0;
+  @Input() points = 0;
+  @Input('index') playerAlias = 0;
 
   ngOnInit(): void {
     this.playerName = `Player ${this.playerAlias}`;
   }
 
   add(): void {
-    this.points += this.step;
+    if (!this.longTap) {
+      this.points += this.step;
+    }
   }
 
   subtract(): void {
-    this.points -= this.step;
+    if (!this.longTap) {
+      this.points -= this.step;
+    }
   }
 
-  press(event: any) {
-    console.log('longpressParent', event);
-  }
-
-  longPressingAdd(event: any) {
+  longPressingAdd(event: any = null) {
     this.points += this.step * 10;
+  }
+
+  longPress(event: any) {
+    this.longTap = true;
+  }
+
+  longPressEnd(event: any) {
+    setTimeout(() => {
+      this.longTap = false;
+    }, 5);
   }
 
   longPressingSubtract(event: any) {

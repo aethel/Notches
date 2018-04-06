@@ -1,9 +1,15 @@
-import {Directive, Input, Output, EventEmitter, HostBinding, HostListener} from '@angular/core';
+import {
+  Directive,
+  Input,
+  Output,
+  EventEmitter,
+  HostBinding,
+  HostListener
+} from '@angular/core';
 
-@Directive({ selector: '[long-press]' })
+@Directive({selector: '[long-press]'})
 export class LongPress {
-
-  @Input() duration: number = 500;
+  @Input() duration = 500;
 
   @Output() onLongPress: EventEmitter<any> = new EventEmitter();
   @Output() onLongPressing: EventEmitter<any> = new EventEmitter();
@@ -12,19 +18,25 @@ export class LongPress {
   private pressing: boolean;
   private longPressing: boolean;
   private timeout: any;
-  private mouseX: number = 0;
-  private mouseY: number = 0;
+  private mouseX = 0;
+  private mouseY = 0;
 
   @HostBinding('class.press')
-  get press() { return this.pressing; }
+  get press() {
+    return this.pressing;
+  }
 
   @HostBinding('class.longpress')
-  get longPress() { return this.longPressing; }
+  get longPress() {
+    return this.longPressing;
+  }
 
   @HostListener('mousedown', ['$event'])
-  onMouseDown(event:any) {
+  onMouseDown(event: any) {
     // don't do right/middle clicks
-    if(event.which !== 1) return;
+    if (event.which !== 1)  {
+      return;
+    }
 
     this.mouseX = event.clientX;
     this.mouseY = event.clientY;
@@ -42,19 +54,19 @@ export class LongPress {
   }
 
   @HostListener('mouseout', ['$event'])
-  onMouseMove(event:any) {
-    if(this.pressing && this.longPressing) {
-      const xThres = (event.clientX - this.mouseX) > 10;
-      const yThres = (event.clientY - this.mouseY) > 10;
+  onMouseMove(event: any) {
+    if (this.pressing && this.longPressing) {
+      const xThres = event.clientX - this.mouseX > 10;
+      const yThres = event.clientY - this.mouseY > 10;
 
-      if(xThres || yThres) {
+      if (xThres || yThres) {
         this.endPress();
       }
     }
   }
 
-  loop(event:any) {
-    if(this.longPressing) {
+  loop(event: any) {
+    if (this.longPressing) {
       this.timeout = setTimeout(() => {
         this.onLongPressing.emit(event);
         this.loop(event);
@@ -70,6 +82,7 @@ export class LongPress {
   }
 
   @HostListener('mouseup')
-  onMouseUp() { this.endPress(); }
-
+  onMouseUp() {
+    this.endPress();
+  }
 }

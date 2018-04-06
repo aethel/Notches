@@ -4,12 +4,12 @@ import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   // selector: 'n-list',
-  templateUrl: 'app/scoreList/score-list.html'
+  templateUrl: './score-list.html'
 })
 export class ScoreListComponent implements OnInit {
   private setupObj: Object;
   private playersArr: any[];
-  private popover: boolean = false;
+  private popover = false;
 
   constructor(private _route: ActivatedRoute, private _router: Router) {}
 
